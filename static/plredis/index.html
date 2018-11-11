@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
+		<script src="js/axios.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<div class="addContent">
+				<input type="text" v-model='content' name="content" id="content" value=""  />
+				<button @click='sendbtn' >发送评论</button>
+			</div>
+			
+			
+			<div class="contentList">
+				<div class="contentItem" v-for='item in contentList'>
+					<h3>{{item.username}}</h3>
+					<img :src="item.headerimg"/>
+					<p>{{item.content}}</p>
+					<h4 :data-id="item._id" @click='clickZan' >点赞数：{{item.zanNum}}</h4>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		
+		<script type="text/javascript">
+			var app = new Vue({
+				el:"#app",
+				data:{
+					content:"",
+					contentList:[]
+				},
+				methods:{
+					sendbtn:function(e){
+						that = this
+						if(this.content.length>0){
+							axios.get('http://localhost:8000/addContent',
+							{
+								params:{
+									username:'xxx',
+									content:this.content,
+									headerimg:'https://tvax2.sinaimg.cn/crop.0.0.750.750.180/b5ff8eb1ly8fvwach7gosj20ku0kut9o.jpg',
+									zanNum:0
+								}
+							}
+							).then(function(res){
+								if(res.data == 'ok'){
+									alert('添加评论成功')
+									getContentList(that)
+								}
+								
+							})
+						}
+					},
+					clickZan:function(e){
+						console.log(e)
+						that = this
+						id = e.target.dataset.id
+						axios.get('http://localhost:8000/addzan?_id='+id).then(function(res){
+							if(res.data=='ok'){
+								getContentList(that)
+							}
+						})
+					}
+				},
+				mounted:function(){
+					var that = this
+					getContentList(that)
+				}
+			})
+			
+			
+			function getContentList(that){
+				axios.get('http://localhost:8000/pinglunList').then(function(res){
+						console.log(res)
+						
+						that.contentList = res.data
+						
+				})
+			}
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,42 @@
+"""edianzu URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/2.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path,include,re_path
+from . import views
+
+
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.index),
+    #动态路由，<int/str:变量名称>
+    path('product/<str:id>',views.product),
+    #正则的形式，小括号里的内容将会传入到视图函数
+    re_path(r'^article([0-9]+)$',views.article),
+    # path('',include('goods.urls'))
+    path('setcookie',views.setcookie),
+    path('upload',views.uploadfile),
+    path('pinglunList', views.pinglunList),
+    path('addContent',views.addContent),
+    path('addzan', views.addzan),
+    # 配置各个路由
+    path('goods/',include('goods.urls')),
+    path('qiantai/',include('qiantai.urls')),
+    path('order/',include('order.urls')),
+    path('user/',include('user.urls')),
+    path('houtai/',include('houtai.urls')),
+    path('xiangqing/',include('xiangqing.urls'))
+]
