@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'goods',
     'order',
-    'user'
+    'user',
+    'houtai',
+    'xiangqing'
 ]
 
 MIDDLEWARE = [
@@ -132,6 +134,12 @@ STATIC_URL = '/static/'
 #这是配置服务器静态文件放置的位置
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # 设置静态文件夹
+    os.path.join(BASE_DIR, 'goods/static'),
+    os.path.join(BASE_DIR, 'houtai/static'),
+    os.path.join(BASE_DIR, 'order/static'),
+    os.path.join(BASE_DIR, 'qiantai/static'),
+    os.path.join(BASE_DIR, 'user/static'),
+    os.path.join(BASE_DIR, 'xiangqing/static'),
 ]
 
 

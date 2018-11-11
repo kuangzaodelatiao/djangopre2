@@ -20,5 +20,5 @@ from . import views
 
 
 urlpatterns = [
-    path('',views.index)    
+    path('search/<str:type>',views.index)    
 ]

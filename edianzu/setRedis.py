@@ -4,7 +4,7 @@ import time
 # host是redis主机，需要redis服务端和客户端都起着 redis默认端口是6379
 pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True)
 r = redis.Redis(connection_pool=pool)
-
+# pipe = r.pipeline()
 
 #字符串增删改查
 
