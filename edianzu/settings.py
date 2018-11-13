@@ -79,19 +79,33 @@ WSGI_APPLICATION = 'edianzu.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'edianzu',#数据库名称
-        "USER": 'root',#数据库用户名
-        "PASSWORD": '123456',#数据库密码
-        "HOST": 'localhost',#数据库的主机地址
-        "PORT": '3306'#数据库的端口号
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'djangoSql',#数据库名称
+    #     "USER": 'root',#数据库用户名
+    #     "PASSWORD": '123456',#数据库密码
+    #     "HOST": '127.0.0.1',#数据库的主机地址
+    #     "PORT": '3306'#数据库的端口号
+    # }
 }
+
+# 设置session保存在redis中
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': 'redis://192.168.8.112:6379/1',
+#         'OPTIONS': {
+#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#         }
+#     }
+# }
+# SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+# SESSION_CACHE_ALIAS = 'default'
+
 
 
 # Password validation

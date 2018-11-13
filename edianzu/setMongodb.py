@@ -3,7 +3,7 @@ from pymongo import MongoClient
 
 
 #连接
-conn = MongoClient('localhost', 27017)
+conn = MongoClient('192.168.8.112', 27017)
 
 #进入数据库
 db = conn.edianzu  #连接mydb数据库，没有则自动创建
@@ -12,9 +12,6 @@ db = conn.edianzu  #连接mydb数据库，没有则自动创建
 # pinglun = db.pinglun  # 使用test_set集合，没有则自动创建
 # goods_img = db.goods_img
 # goods_img.insert({'img_list':['https://edzimg.edianzu.com/product/2018/09/b05410dbe885cf45fb56dea5102bb6ac.jpg?x-oss-process=image/resize,m_fill,h_380,w_380']})
-
-
-
 
 
 

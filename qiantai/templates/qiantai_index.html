@@ -2,12 +2,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 
-
-
-
-
-
-
 <html>
 <head>
 <title>易点租_办公电脑免押金租赁电商</title>
@@ -39,9 +33,12 @@
 		ROOT_PATH = '';
 	</script>
 	<script crossorigin type="text/javascript" src="https://resources.edianzu.com/mall_new/20181108_1/js/edz.web.lib.min.js?version=2018_11_08_20_31_27"></script>
-	<script crossorigin type="text/javascript" src="https://resources.edianzu.com/mall_new/20181108_1/js/edz.web.min.js?version=2018_11_08_20_31_27"></script>
+	
+		
+	<!--<script crossorigin type="text/javascript" src="https://resources.edianzu.com/mall_new/20181108_1/js/edz.web.min.js?version=2018_11_08_20_31_27"></script>-->
+	
 	<script type="text/javascript" src="https://cstaticdun.126.net/load.min.js"></script>
-
+	<script type="text/javascript" src="/static/user_js/jquery-2.1.0.js"></script>
 	
 	<script crossorigin type='text/javascript'>
 		var _vds = _vds || [];
@@ -71,7 +68,13 @@
 
 
 	
-
+	<style type="text/css">
+		#Index{
+			width: 90%;
+			height: auto;
+			margin: 0 auto;
+		}
+	</style>
 
 
 </head>
@@ -101,35 +104,14 @@
 	            
 	                <dt class="fl">
 	                    <ul>
-	                        <li class="fl">您好，欢迎来到易点租</li>
+	                        <li class="fl">{{username}}</li>
 	                        <li class="not-loginfirst fl">
-	                            <a href="javascript:void(0);" id="to_login" class="login">登录</a>
-	                            <a href="/register" class="register">注册</a>
+	                            <a href="/user/login/" id="to_login" class="login">{{login}}</a>
+	                            <a href="/user/register/" class="register">{{register}}</a>
 	                        </li>
 	                    </ul>
 	                </dt>
-                    <dd class="fr">
-                        <ul class="clearfix">
-                            
-
-
-
-<li>
-    销售热线：
-    <span class="color-blue">400-810-9528</span>
-</li>
-<li>
-    客服热线：
-    <span class="color-blue">400-886-9528</span>
-</li>
-<li>
-    <a href="/help">
-        服务中心
-    </a>
-</li>
-
-                        </ul>
-                    </dd>
+                   
 	            
 	        
 	    </dl>
@@ -149,7 +131,7 @@
                 </div>
                 <button class="hsearch-but">
                     <i class="icon-header-search"></i>
-                    搜索
+                    		搜索
                 </button>
             </div>
             <p class="search-word">
@@ -159,7 +141,7 @@
         <dd class="index-Hshopping fr">
             <a href="/carts" class="button" target="_blank">
                 <i class="icon-header-shopping"></i>
-                购物车
+                		购物车
                 <b>&gt;</b>
             </a>
             <span>0</span>
@@ -173,7 +155,7 @@
                     商品分类
                     <i class="nav-direction icon-nav-down"></i>
                 </a>
-                <ul class="nav-list">
+                <ul class="nav-list" style="display:block;">
                     <li>
                         <div class="list-main">
                             <h6>
@@ -331,7 +313,12 @@
 <!-- 登录 注册 的头部 -->
 
 
-
+<script type="text/javascript">
+	$('.hsearch-but').click(function(){
+		inputtext = $('.hsearch-text').val()
+		location.href = ''
+	})
+</script>
 
 
 
@@ -358,58 +345,38 @@
 					class="banner-btn btn_next"><i class="icon-btn-light-right"></i></a>
 				<div class="flicking_inner">
 					
-						<a href="javascript:;" class="">0</a>
+						<a href="" class="">0</a>
 					
-						<a href="javascript:;" class="">1</a>
+						<a href="" class="">1</a>
 					
-						<a href="javascript:;" class="">2</a>
+						<a href="" class="">2</a>
 					
-						<a href="javascript:;" class="">3</a>
+						<a href="" class="">3</a>
 					
-						<a href="javascript:;" class="">4</a>
-					
-						<a href="javascript:;" class="">5</a>
-					
-						<a href="javascript:;" class="">6</a>
-					
-						<a href="javascript:;" class="">7</a>
+						
 					
 				</div>
 			</div>
 			<div class="main_image banner_center">
 				<ul class="loop_logo" style="width:100%; overflow: visible;">
 					
-						<li><a target="_blank" href="item/120124"> <span
-								style="background: url(https://edzimg.edianzu.com/homepage/0eac6b552a992b677362d767c15737b8.jpg) center top no-repeat"></span>
+						<li><a target=""> <span
+								style="background: url(/static/qiantai_img/luanbo_1.jpg) center top no-repeat"></span>
 						</a></li>
 					
-						<li><a target="_blank" href="item/119735"> <span
-								style="background: url(https://edzimg.edianzu.com/homepage/14d8e4d36359ea86efd9566ca6b92d36.jpg) center top no-repeat"></span>
+						<li><a target="_blank" href=""> <span
+								style="background: url(/static/qiantai_img/luanbo_2.jpg) center top no-repeat"></span>
 						</a></li>
 					
-						<li><a target="_blank" href="https://www.edianzu.com/category?title=M720S"> <span
-								style="background: url(https://edzimg.edianzu.com/homepage/a1121a0159b112e7eed12ee38b8cf779.jpg) center top no-repeat"></span>
+						<li><a target="_blank" href=""> <span
+								style="background: url(/static/qiantai_img/luanbo_3.jpg) center top no-repeat"></span>
 						</a></li>
 					
-						<li><a target="_blank" href="https://www.edianzu.com/category?title=400%2520G5"> <span
-								style="background: url(https://edzimg.edianzu.com/homepage/914d7311cf4c4d68eca0d408f7faa777.jpg) center top no-repeat"></span>
+						<li><a target="_blank" href=""> <span
+								style="background: url(/static/qiantai_img/luanbo_4.jpg) center top no-repeat"></span>
 						</a></li>
 					
-						<li><a target="_blank" href="https://eqigou.edianzu.com/"> <span
-								style="background: url(https://edzimg.edianzu.com/homepage/e2a20273147cab5339e1eb67493466fb.jpg) center top no-repeat"></span>
-						</a></li>
-					
-						<li><a target="_blank" href="https://www.edianzu.com/category?title=3060"> <span
-								style="background: url(https://edzimg.edianzu.com/homepage/2dcee56902f8ce98cca97556104c01e5.jpg) center top no-repeat"></span>
-						</a></li>
-					
-						<li><a target="_blank" href="item/115961"> <span
-								style="background: url(https://edzimg.edianzu.com/homepage/9f1cb74323f4e5ad8ea395e6ea808eed.jpg) center top no-repeat"></span>
-						</a></li>
-					
-						<li><a target="_blank" href="/cooperation"> <span
-								style="background: url(https://edzimg.edianzu.com/homepage/69f83f32fdeececcd910cc4059309a9c.jpg) center top no-repeat"></span>
-						</a></li>
+						
 					
 				</ul>
 			</div>
@@ -443,12 +410,12 @@
 						
 							<a href="/item/112054" target="_blank" class="hot-2">
 								<div class="tex-height">
-									<div class="txt-sub">ThinkPad X220 12.5英寸便携笔记本</div>
+									<div class="txt-sub">{{hot_sale.0.shop_content}}</div>
 									<div class="txt-des">i5/4GB/500GB/集显</div>
-									<div class="txt-price-2">￥70/月</div>
+									<div class="txt-price-2">￥{{hot_sale.0.shop_price}}/月</div>
 								</div>
 								<div class="com-pic-2 img-box">
-									<img src="https://edzimg.edianzu.com/homepage/171dbdbc85c270cf36ed96d81496f002.jpg" />
+									<img src="{{hot_sale.0.shop_img}}" />
 									
 								</div>
 							</a>
@@ -460,12 +427,12 @@
 						
 							<a href="/item/119434" target="_blank" class="hot-3">
 								<div class="tex-height">
-									<div class="txt-sub">全新 易点租 QuickPC E32 Pro 台式机</div>
+									<div class="txt-sub">{{hot_sale.1.shop_content}}</div>
 									<div class="txt-des">G4900/4G/120G SSD/核显</div>
-									<div class="txt-price-3">￥95/月</div>
+									<div class="txt-price-3">￥{{hot_sale.1.shop_price}}/月</div>
 								</div>
 								<div class="com-pic-3 img-box">
-									<img src="https://edzimg.edianzu.com/homepage/5b210f4db7fdbdfbab99bcf0ef6652bf.jpg" />
+									<img src="{{hot_sale.1.shop_img}}" />
 									
 								</div>
 							</a>
@@ -477,12 +444,12 @@
 						
 							<a href="/item/100245" target="_blank" class="hot-4">
 								<div class="tex-height">
-									<div class="txt-sub">ThinkPad T420 极速版 14.0英寸笔记本电脑</div>
+									<div class="txt-sub">{{hot_sale.2.shop_content}}</div>
 									<div class="txt-des">i5/4GB/120GB SSD/集显</div>
-									<div class="txt-price-4">￥95/月</div>
+									<div class="txt-price-4">￥{{hot_sale.2.shop_price}}/月</div>
 								</div>
 								<div class="com-pic-4 img-box">
-									<img src="https://edzimg.edianzu.com/homepage/20a29e0fc3fdec3decc2b992167b29ec.jpg" />
+									<img src="{{hot_sale.2.shop_img}}" />
 									
 								</div>
 							</a>
@@ -494,12 +461,12 @@
 						
 							<a href="/item/110323" target="_blank" class="hot-5">
 								<div class="tex-height">
-									<div class="txt-sub">ThinkPad X230 极速版 12.5英寸笔记本电脑</div>
+									<div class="txt-sub">{{hot_sale.3.shop_content}}</div>
 									<div class="txt-des">i5/8GB/240GB SSD/集显</div>
-									<div class="txt-price-5">￥105/月</div>
+									<div class="txt-price-5">￥{{hot_sale.3.shop_price}}/月</div>
 								</div>
 								<div class="com-pic-5 img-box">
-									<img src="https://edzimg.edianzu.com/homepage/5acada2f087a0fd73bb30b8f623bf2fa.jpg" />
+									<img src="{{hot_sale.3.shop_img}}" />
 									
 								</div>
 							</a>
@@ -511,12 +478,12 @@
 						
 							<a href="/item/110322" target="_blank" class="hot-6">
 								<div class="tex-height">
-									<div class="txt-sub">ThinkPad T430 极速版 14.0英寸笔记本电脑</div>
+									<div class="txt-sub">{{hot_sale.4.shop_content}}</div>
 									<div class="txt-des">i5/8GB/240GB SSD/集显</div>
-									<div class="txt-price-6">￥135/月</div>
+									<div class="txt-price-6">￥{{hot_sale.4.shop_price}}/月</div>
 								</div>
 								<div class="com-pic-6 img-box">
-									<img src="https://edzimg.edianzu.com/homepage/caf4e5b90daa224a65fcd708ff76c05c.jpg" />
+									<img src="{{hot_sale.4.shop_img}}" />
 									
 								</div>
 							</a>
@@ -528,12 +495,12 @@
 						
 							<a href="/item/120358" target="_blank" class="hot-7">
 								<div class="tex-height">
-									<div class="txt-sub">全新 易点租/Edianzu E36 Pro 台式机</div>
+									<div class="txt-sub">{{hot_sale.5.shop_content}}</div>
 									<div class="txt-des">i5/8G/240G SSD/核显</div>
-									<div class="txt-price-7">￥208/月</div>
+									<div class="txt-price-7">￥{{hot_sale.5.shop_price}}/月</div>
 								</div>
 								<div class="com-pic-7 img-box">
-									<img src="https://edzimg.edianzu.com/homepage/2054a469a80f454ee9acc50098e1337b.jpg" />
+									<img src="{{hot_sale.5.shop_img}}" />
 									
 								</div>
 							</a>
@@ -547,18 +514,18 @@
 	<!-- 文章标签 -->
 	<div class="detail-info">
 		<ul class="fnav_small">
-			<li><a href="https://www.edianzu.cn/help/topic/1"><i class="icon-bar-floder-white"></i><i
+			<li><a href=""><i class="icon-bar-floder-white"></i><i
 					class="icon-bar-floder" style="display: none"> </i> 免押金 </a></li>
-			<li><a href="https://www.edianzu.cn/help/topic/4"><i class="icon-bar-schedule"></i> <i
+			<li><a href=""><i class="icon-bar-schedule"></i> <i
 					class="icon-bar-schedule-white" style="display: none"></i> 随租随还 </a></li>
-			<li><a href="https://www.edianzu.cn/help/topic/0"><i class="icon-bar-bag"></i><i class="icon-bar-bag-white"
+			<li><a href=""><i class="icon-bar-bag"></i><i class="icon-bar-bag-white"
 					style="display: none"></i> 一台起租 </a></li>
-			<li><a href="https://www.edianzu.cn/help/topic/0"> <i class="icon-bar-calendar"></i><i
+			<li><a href=""> <i class="icon-bar-calendar"></i><i
 					class="icon-bar-calendar-white" style="display: none"></i> 按月支付
 			</a></li>
-			<li><a href="https://www.edianzu.cn/help"><i class="icon-bar-share"></i><i class="icon-bar-share-white"
+			<li><a href=""><i class="icon-bar-share"></i><i class="icon-bar-share-white"
 					style="display: none"></i> 高性价比 </a></li>
-			<li class="marignli"><a href="https://www.edianzu.cn/help/topic/22"> <i class="icon-bar-setting"></i><i
+			<li class="marignli"><a href=""> <i class="icon-bar-setting"></i><i
 					class="icon-bar-setting-white" style="display: none"></i> 全程保修
 			</a></li>
 		</ul>
@@ -567,697 +534,124 @@
 	
 		<div class="box-all">
 			
-				<div href="" class="floor-1" id="floor-1">
-					<p class="title">
-						<i class="icon-floor1"></i> <span class="txt">行政办公</span>
-					</p>
-					<div class="floor-con">
-						
-							
-								
-									<div class="img-box">
-										<a href="/item/119433" target="_blank" class="fir-img">
-											<img src="https://edzimg.edianzu.com/homepage/11554170ebaab1f123ec8ac32a4d9a38.jpg" />
-											
-										</a>
-									</div>
-								
-								
-							
-						
-							
-								
-								
-									<a href="/item/116600" target="_blank" class="part-1">
-										<div class="img-1">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/4ce19dbec60b1cc9980a3e44e518f9cb.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-1">
-											<p>全新 戴尔DELL 成铭 3980 G5400/4G/500G/集成显卡/E2016HM/Win10 Home</p>
-										</div>
-										<div class="price">￥99/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/116602" target="_blank" class="part-2">
-										<div class="img-2">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/1ecc61278f507b1b86242bdab372e4ad.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-2">
-											<p>全新 戴尔DELL 3060SFF台式机(i3-8100/4G/1T/集显/Win10 Home/E2216H)</p>
-										</div>
-										<div class="price">￥128/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/117198" target="_blank" class="part-3">
-										<div class="img-3">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/8c9188ab0b87bffc523e7361cc51f581.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-3">
-											<p>全新 易点租/Edianzu E33A Pro台式机(I3-8100 3.6GHz/8G/1T/核显UHD630/Linux/E2216H 21.5寸/USB无线网卡)</p>
-										</div>
-										<div class="price">￥155/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/112758" target="_blank" class="part-4">
-										<div class="img-4">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/dbf0d0e2700c5414117d0d25284443f5.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-4">
-											<p>ThinkPad T440 14.0英寸笔记本电脑(i5/8G/240G SSD/核显)</p>
-										</div>
-										<div class="price">￥158/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/118547" target="_blank" class="part-5">
-										<div class="img-5">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/7fcce0d1c1a2bf2ecef1d19e685724ce.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-5">
-											<p>全新 联想ThinkCentre M720s 商用台式机(G5400/4GB/500G/集显/TE-20 19.5英寸/win10 home)</p>
-										</div>
-										<div class="price">￥128/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/120362" target="_blank" class="part-6">
-										<div class="img-6">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/1c1a7b70c12ecc1468d62dafade6f72e.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-6">
-											<p>全新 易点租 QuickPC P31B 台式机(i3-8100 3.6GHz/8G/240G SSD/GT1030 2G/E2417H 23.8英寸/Linux/USB无线网卡/24L机箱))</p>
-										</div>
-										<div class="price">￥188/月</div>
-									</a>
-								
-							
-						
-					</div>
-				</div>
+				{%for item in all_info%}
 			
 				<div href="" class="floor-2" id="floor-2">
 					<p class="title">
-						<i class="icon-floor2"></i> <span class="txt">技术开发</span>
+						<i class="icon-floor2"></i> <span class="txt">{{item.genre_name}}</span>
 					</p>
 					<div class="floor-con">
-						
-							
-								
+
 									<div class="img-box">
 										<a href="/item/111725" target="_blank" class="fir-img">
-											<img src="https://edzimg.edianzu.com/homepage/8132f35da133f12f190c0b7d82cc7486.jpg" />
+											<img src="{{item.genre_img}}" />
 											
 										</a>
 									</div>
-								
-								
-							
-						
-							
+
 								
 								
 									<a href="/item/120357" target="_blank" class="part-1">
 										<div class="img-1">
 											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/eab5fd093ee6c673a53969ba9e67395e.jpg" />
+											<img src="{{item.shop_list.0.shop_img}}" />
 											
 											</div>
 										</div>
 										<div class="fon-1">
-											<p>全新 易点租/Edianzu 易办公QuickPC E35 Pro 台式机 (i5-8400/8G/1T/核显UHD630/23.8戴尔显示器/Linux/USB无线网卡)</p>
+											<p>{{item.shop_list.0.shop_content}}</p>
 										</div>
-										<div class="price">￥208/月</div>
+										<div class="price">￥{{item.shop_list.0.shop_price}}/月</div>
 									</a>
 								
-							
-						
-							
+
 								
 								
 									<a href="/item/112760" target="_blank" class="part-2">
 										<div class="img-2">
 											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/7fd198064acc7de4f038c1766d32134d.jpg" />
+											<img src="{{item.shop_list.1.shop_img}}" />
 											
 											</div>
 										</div>
 										<div class="fon-2">
-											<p>ThinkPad T440p 14英寸笔记本电脑 (i5/16G/240G SSD/核显)</p>
+											<p>{{item.shop_list.1.shop_content}}</p>
 										</div>
-										<div class="price">￥178/月</div>
+										<div class="price">￥{{item.shop_list.1.shop_price}}/月</div>
 									</a>
 								
-							
-						
-							
-								
+
 								
 									<a href="/item/114849" target="_blank" class="part-3">
 										<div class="img-3">
 											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/d600cd1bbde5a562e52b301b9dd69d2c.jpg" />
+											<img src="{{item.shop_list.2.shop_img}}" />
 											
 											</div>
 										</div>
 										<div class="fon-3">
-											<p>全新 ThinkPad E480 (20KNA00QCD)14英寸笔记本电脑(i5-8250U/8G/256G SSD/RX550 2G独显/1920*1080/1年保修)</p>
+											<p>{{item.shop_list.2.shop_content}}</p>
 										</div>
-										<div class="price">￥248/月</div>
+										<div class="price">￥{{item.shop_list.2.shop_price}}/月</div>
 									</a>
 								
-							
-						
-							
-								
+
 								
 									<a href="/item/114480" target="_blank" class="part-4">
 										<div class="img-4">
 											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/147ac9907ea87e33014d20285c6a8596.jpg" />
+											<img src="{{item.shop_list.3.shop_img}}" />
 											
 											</div>
 										</div>
 										<div class="fon-4">
-											<p>全新 惠普/hp ProBook 440 G5 14英寸笔记本电脑(i7-8550U/8G/128G SSD+1T/930MX 2G独显)</p>
+											<p>{{item.shop_list.3.shop_content}}</p>
 										</div>
-										<div class="price">￥268/月</div>
+										<div class="price">￥{{item.shop_list.3.shop_price}}/月</div>
 									</a>
 								
 							
-						
-							
-								
+
 								
 									<a href="/item/120361" target="_blank" class="part-5">
 										<div class="img-5">
 											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/29cfc84c48f35938939ed92860bc23f3.jpg" />
+											<img src="{{item.shop_list.4.shop_img}}" />
 											
 											</div>
 										</div>
 										<div class="fon-5">
-											<p>全新 易点租 QuickPC E38A Pro 台式机 (i7-8700 3.2GHz/16G/480G SSD/核显UHD630/E2417H 23.8英寸/Linux/USB无线网卡/8L机箱)</p>
+											<p>{{item.shop_list.4.shop_content}}</p>
 										</div>
-										<div class="price">￥278/月</div>
+										<div class="price">￥{{item.shop_list.4.shop_price}}/月</div>
 									</a>
 								
-							
-						
-							
-								
-								
+
 									<a href="/item/114863" target="_blank" class="part-6">
 										<div class="img-6">
 											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/7cd627737362956e5ca43273db77ef42.jpg" />
+											<img src="{{item.shop_list.5.shop_img}}" />
 											
 											</div>
 										</div>
 										<div class="fon-6">
-											<p>全新 ThinkPad T480 (20L5A00DCD)14英寸笔记本电脑(i5-8250U/8G/256G SSD/核显)</p>
+											<p>{{item.shop_list.5.shop_content}}</p>
 										</div>
-										<div class="price">￥278/月</div>
+										<div class="price">￥{{item.shop_list.5.shop_price}}/月</div>
 									</a>
-								
-							
-						
+
 					</div>
 				</div>
 			
-				<div href="" class="floor-3" id="floor-3">
-					<p class="title">
-						<i class="icon-floor3"></i> <span class="txt">商务便携</span>
-					</p>
-					<div class="floor-con">
-						
-							
-								
-									<div class="img-box">
-										<a href="/item/114856" target="_blank" class="fir-img">
-											<img src="https://edzimg.edianzu.com/homepage/a2b444ed96a727d2da7671c4ed2a6d9e.jpg" />
-											
-										</a>
-									</div>
-								
-								
-							
-						
-							
-								
-								
-									<a href="/item/100159" target="_blank" class="part-1">
-										<div class="img-1">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/241bc7b9c7213dd3d40f5d24dbf77b9d.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-1">
-											<p>ThinkPad X240 12.5寸便携笔记本电脑(i5/8GB/240GB SSD/核心显卡)</p>
-										</div>
-										<div class="price">￥164/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/111507" target="_blank" class="part-2">
-										<div class="img-2">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/63e26fe5b270cd787b0c380467a5c8fb.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-2">
-											<p>全新 小米(XIAOMI) air 12.5英寸笔记本电脑 (Core M3-7Y30/4GB/128GB SSD/集显/FHD/win10/银色机身)</p>
-										</div>
-										<div class="price">￥178/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/114851" target="_blank" class="part-3">
-										<div class="img-3">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/88b66070dc0c76f24e80f4826fe553d9.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-3">
-											<p>全新 ThinkPad NEW S2 (20L1A001CD)13.3英寸笔记本电脑(i5-8250U/8G/256G SSD/UHD 620核显/FHD/WIN 10家庭版/银/无指纹/1年保修)</p>
-										</div>
-										<div class="price">￥232/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/111722" target="_blank" class="part-4">
-										<div class="img-4">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/09448290ce2f6459f90d8e449da83b27.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-4">
-											<p>全新 苹果Apple Macbook Air MQD32CH/A 13.3英寸笔记本电脑 (i5/8G/128G/Intel HD6000)</p>
-										</div>
-										<div class="price">￥233/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/114854" target="_blank" class="part-5">
-										<div class="img-5">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/0f97a8da4052bfa17b6479604288f321.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-5">
-											<p>全新 ThinkPad X1 Carbon 2018 (20KH0009CD)14英寸笔记本电脑(i5-8250U/8G/256G SSD/UHD 620核显/FHD/WIN 10家庭版/1年保修)</p>
-										</div>
-										<div class="price">￥387/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/111900" target="_blank" class="part-6">
-										<div class="img-6">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/2a5e32e864f819b8304be1341b74bb12.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-6">
-											<p>全新 微软(Microsoft) 2017款 Surface Pro (FKG00009) 12.3寸便携超极本 (i7/8G/256G SSD/核显/Win10 Pro)</p>
-										</div>
-										<div class="price">￥578/月</div>
-									</a>
-								
-							
-						
-					</div>
-				</div>
-			
-				<div href="" class="floor-4" id="floor-4">
-					<p class="title">
-						<i class="icon-floor4"></i> <span class="txt">图形处理</span>
-					</p>
-					<div class="floor-con">
-						
-							
-								
-									<div class="img-box">
-										<a href="/item/120363" target="_blank" class="fir-img">
-											<img src="https://edzimg.edianzu.com/homepage/fe938d6470bbe2bb972c68b112851713.jpg" />
-											
-										</a>
-									</div>
-								
-								
-							
-						
-							
-								
-								
-									<a href="/item/118573" target="_blank" class="part-1">
-										<div class="img-1">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/dbf351a01aa132ba63f0230d4b28e42e.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-1">
-											<p>全新 联想ThinkCentre M720s 商用台式机(i7-8700/16GB/1TB/GT730 2G独显/T2324 23英寸/win10 home)</p>
-										</div>
-										<div class="price">￥278/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/114063" target="_blank" class="part-2">
-										<div class="img-2">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/124dcf064749cc22cbd2067ab27aa10d.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-2">
-											<p>全新 小米(XIAOMI) Pro 15.6英寸笔记本电脑(i7-8550U/16G/256G SSD/MX150 2G独显/FHD/Win10 Home)</p>
-										</div>
-										<div class="price">￥328/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/119141" target="_blank" class="part-3">
-										<div class="img-3">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/9ce2ef572102a1a4637b44d09e8da3ab.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-3">
-											<p>全新 戴尔DELL 3060MT台式机(i7-8700/16G/256G SSD+1T/P2317H 23英寸 LED/GTX1050Ti/Win10 Home)</p>
-										</div>
-										<div class="price">￥368/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/118040" target="_blank" class="part-4">
-										<div class="img-4">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/bcc4c389b4a0361e0cd042595ee38353.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-4">
-											<p>全新 易点租/Edianzu P34A 台式机（i7-8700/16G/240G+2T/GTX1060 6G/AOC Q2790VQ）</p>
-										</div>
-										<div class="price">￥468/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/111731" target="_blank" class="part-5">
-										<div class="img-5">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/b68ef136e4219d52f36fafff9d48d1ab.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-5">
-											<p>全新 苹果(Apple) iMac MNE92CH/A 27英寸一体电脑(i5 3.4G四核/8G/1T Fusion/Radeon Pro 570 4G独显/Retina 5K)</p>
-										</div>
-										<div class="price">￥477/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/119109" target="_blank" class="part-6">
-										<div class="img-6">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/db5131346948993af7dd88eb6e846de9.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-6">
-											<p>全新 易点租 QuickPC P37 台式机(i7-8700/16G/240G SSD+2T/Quadro P2000 5G/P2719H 27英寸/无线键鼠/USB无线网卡/Linux)</p>
-										</div>
-										<div class="price">￥498/月</div>
-									</a>
-								
-							
-						
-					</div>
-				</div>
-			
-				<div href="" class="floor-5" id="floor-5">
-					<p class="title">
-						<i class="icon-floor5"></i> <span class="txt">外设配件</span>
-					</p>
-					<div class="floor-con">
-						
-							
-								
-									<div class="img-box">
-										<a href="/item/115567" target="_blank" class="fir-img">
-											<img src="https://edzimg.edianzu.com/homepage/e4a3f54c517ffc23a80924e928342422.jpg" />
-											
-										</a>
-									</div>
-								
-								
-							
-						
-							
-								
-								
-									<a href="/item/119087" target="_blank" class="part-1">
-										<div class="img-1">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/a29218e89b7615af7fda3a566d12357f.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-1">
-											<p>全新 戴尔(DELL) P2319H 23英寸升降旋转微边框滤蓝光不闪IPS屏显示器</p>
-										</div>
-										<div class="price">￥55/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/100216" target="_blank" class="part-2">
-										<div class="img-2">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/85b42cbdb88fecf8f2c9a692c23bec7f.png" />
-											
-											</div>
-										</div>
-										<div class="fon-2">
-											<p>微软/Microsoft office 365 办公软件(商业版)</p>
-										</div>
-										<div class="price">￥52/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/100012" target="_blank" class="part-3">
-										<div class="img-3">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/30191cd987ceac49dcc4a829202b81ca.png" />
-											
-											</div>
-										</div>
-										<div class="fon-3">
-											<p>全新 苹果(Apple) Mac mini MGEM2CH/A 主机(Core i5/4GB/500GB/HD Graphics5000)</p>
-										</div>
-										<div class="price">￥168/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/111103" target="_blank" class="part-4">
-										<div class="img-4">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/003c71d9417270b886b65238db444802.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-4">
-											<p>全新 小米 米家空气净化器pro</p>
-										</div>
-										<div class="price">￥168/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/100081" target="_blank" class="part-5">
-										<div class="img-5">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/a011f14c12ea72806f55812020de7cef.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-5">
-											<p>全新 明基（BenQ）MS3081+ 经典商务会议投影仪(DLP芯片/3200流明/SVGA分辨率)</p>
-										</div>
-										<div class="price">￥238/月</div>
-									</a>
-								
-							
-						
-							
-								
-								
-									<a href="/item/114144" target="_blank" class="part-6">
-										<div class="img-6">
-											<div class="img-box">
-											<img src="https://edzimg.edianzu.com/homepage/7ac2a7f8cb267bf0d2958c7cfe7367ea.jpg" />
-											
-											</div>
-										</div>
-										<div class="fon-6">
-											<p>稳定！企业WIFI无线网络部署按照企业人数计费的解决方案 企业人数[1-10人]</p>
-										</div>
-										<div class="price">￥118/月</div>
-									</a>
-								
-							
-						
-					</div>
-				</div>
+			{%endfor%}
 			
 		</div>
 	
 
-	<!-- 合作伙伴 -->
-	<div class="cooper-partner">
-		<div class="title">
-			<i class="icon-cooper"></i> <span class="cooper">合作伙伴</span>
-		</div>
-		<div class="ul-list">
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-microsoft.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-tencent.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-chanjet.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-tusstar.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-cofco.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-fesco.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-sun.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-5i5j.png"></li>
 
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-samsung.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-ofo.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-mi.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-mobike.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-lbdo.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-soho3.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-risfond.png"></li>
-			<li><img src="https://resources.edianzu.com/mall_new/20181108_1/images/partner-tuniu.png"></li>
-		</div>
-	</div>
 
 	<div class="clear"></div>
-	<!-- 征信伙伴 -->
-<!-- 	<div class="cooper-partner credit">
-	<div class="title">
-		<i class="icon-cooper"></i> <span class="cooper">征信伙伴</span>
-	</div>
-	<div class="ul-list">
-		<ul>
-			<li><a href="http://zmxy.antgroup.com/index.htm?utm_source=edianzu" target="_blank"> <img class="lazy"
-					src="images/z1zmxy.png">
-			</a></li>
-			<li><a href="http://www.pbccrc.org.cn/?utm_source=edianzu" target="_blank"> <img class="lazy"
-					src="images/z2rxzx.png">
-			</a></li>
-		</ul>
-	</div>
-</div> -->
+
 
 	<div class="clear"></div>
 	
@@ -1266,94 +660,10 @@
 
 
 
-<div class="footerAll clearfix">
-	<dl class="content clearfix">
-		<dt class="fr">
-			<div class="footer-right">
-				<i class="icon-footer-logo-new"></i>
-				<h4 class="footer-phone">400-886-9528</h4>
-				<h6 class="footer-time">周一至周日(9:00-18:00)</h6>
-				<!-- <a href="#" class="footer-line">
-					<i class="icon-footer-line"></i>在线咨询
-				</a> -->
-			</div>
-		</dt>
-		<dd class="fl">
-			<ul class="footer-list">
-				<li class="footer-tit">关于易点租</li>
-				<li>
-					<a href="/help/about">公司概况</a>
-				</li>
-				<li>
-					<a href="/help/business">商务合作</a>
-				</li>
-				<li>
-					<a href="/help/join">加入我们</a>
-				</li>
-				<li>
-					<a href="/help/contact">联系我们</a>
-				</li>
-				<li>
-					<a href="/help/report">媒体报道</a>
-				</li>
-			</ul>
-		</dd>
-		<dd class="fl">
-			<ul class="footer-list">
-				<li class="footer-tit">租机预订说明</li>
-				<li>
-					<a href="/help/topic/1">什么是免押金租赁</a>
-				</li>
-				<li>
-					<a href="/help/topic/2">租机流程</a>
-				</li>
-				<li>
-					<a href="/help/topic/3">租金缴付</a>
-				</li>
-				<li>
-					<a href="/help/topic/4">租赁方式</a>
-				</li>
-				<li>
-					<a href="/help/topic/5">租赁协议</a>
-				</li>
-			</ul>
-		</dd>
-		<dd class="fl">
-			<ul class="footer-list">
-				<li class="footer-tit">租机费用及结算</li>
-				<li>
-					<a href="/help/topic/11">价格说明</a>
-				</li>
-				<li>
-					<a href="/help/topic/12">开取发票</a>
-				</li>
-			</ul>
-		</dd>
-		<dd class="fl">
-			<ul class="footer-list footer-list-space">
-				<li class="footer-tit">企业服务</li>
-				<li>
-					<a href="https://group.edianzu.cn/group/index" target="_blank" class="footer-developing">集团账号登录</a>
-				</li>
-				<li>
-					<a href="/help" class="footer-developing">服务中心</a>
-				</li>
-			</ul>
-		</dd>
-	</dl>
-</div>
+
 <div class="footer-bottom clearfix">
 
 
-
-	<p>© Copyright Reserved 2014-2018　| &nbsp; <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802021743" target="_blank"><img src="/images/ghsedz.png" />京公网安备 11010102002019号</a> &nbsp; |　京ICP备14057387号-1　|　北京易点淘网络技术有限公司 </p>
-	<p>办公地址： 北京市海淀区西二旗大街39号融通高科大厦二层 易点租 </p>
-	<p>
-		<a href="/help/topic/8" target="_blank">北京退换机地址</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="/help/topic/8" target="_blank">上海退换机地址</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="/help/topic/8" target="_blank">深圳退换机地址</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<a href="/help/topic/8" target="_blank">武汉退换机地址</a>
-	</p>
 </div>
 
 
@@ -1365,24 +675,6 @@
 
 
 
-	<!--楼层索引-->
-	<div id="floor-direct" class="floor-direct">
-		<ul>
-			<li><a class="num" href="#hot-box" style="display: block;">Hot</a> <a class="word" href="javascript:;"
-				style="display: none;">热销</a></li>
-			<li><a class="num" href="#floor-1" style="display: none;">1F</a> <a class="word" href="javascript:;"
-				style="display: block;">行政</a></li>
-			<li><a class="num" href="#floor-2" style="display: block;">2F</a> <a class="word" href="javascript:;"
-				style="display: none;">技术</a></li>
-			<li><a class="num" href="#floor-3" style="display: block;">3F</a> <a class="word" href="javascript:;"
-				style="display: none;">商务</a></li>
-			<li><a class="num" href="#floor-4" style="display: block;">4F</a> <a class="word" href="javascript:;"
-				style="display: none;">图形</a></li>
-			<li><a class="num" href="#floor-5" style="display: block;">5F</a> <a class="word" href="javascript:;"
-				style="display: none;">外设</a></li>
-			<li><a class="num" href="#floor-6" style="display: block;">合作</a> <a class="word" href="javascript:;"
-				style="display: none;">合作</a></li>
-		</ul>
-	</div>
+
 </body>
 </html>
